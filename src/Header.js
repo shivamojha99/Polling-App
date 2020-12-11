@@ -38,13 +38,10 @@ function Header() {
         </div>
 
         <div className="lower">
-        {console.log("Here is the list")}
-        {console.log(topicslist)}
             {
                 topicslist.map((topic)=>(
                     <>
-                    {console.log(topic)}
-                {/* <h2>{topic.poll}</h2> */}
+               
                      <Topicslist topicc={topic.poll} pos={topic.pos} neg={topic.neg} id={topic.id} />
                      </>
                 ))

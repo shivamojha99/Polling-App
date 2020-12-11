@@ -8,7 +8,7 @@
     background-color: black;
     color:white;
     font-family: "Times New Roman", Times, serif;
-    width: 450px;
+    /* width: 450px; */
     height: 50px;
 }
 
@@ -19,7 +19,7 @@
 
 .topic_list>.left{
     border: 1px solid rgb(110, 171, 209);
-    margin: 6px;
+    margin-right: 6px;
     background-color: rgb(57, 151, 57);
 }
 .topic_list> .left:hover{
@@ -31,7 +31,7 @@
     font-size: 25px;
 }
 .topic_list>.right{
-    margin: 6px;
+    margin-left: 6px;
     border: 1px solid lightskyblue;
     background-color: rgb(165, 47, 47);
 }

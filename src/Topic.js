@@ -20,11 +20,11 @@ function Topic() {
     return (
         <div className="form">
             <form  className="inside_form">
-                <input
+                <input className="input"
                 value={input}
                 onChange={e=> setinput(e.target.value)}
                 placeholder={"Enter the trending Poll"}/>
-                <button type="submit" onClick={sendMessage}>Add Topic</button>
+                <button className="button" type="submit" onClick={sendMessage}>Add Topic</button>
             
             </form>
 

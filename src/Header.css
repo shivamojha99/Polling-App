@@ -23,8 +23,8 @@ transform: scale(1.05,1.05);
     padding: 14px;
     margin: 15px;
     border: 2px solid black;
-    border-radius: 2px;
-  
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.404);
 }
 .middle1 >:hover{
     box-shadow: cornflowerblue;
