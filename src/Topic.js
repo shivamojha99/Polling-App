@@ -11,7 +11,8 @@ function Topic() {
                 topic:input,
                 // timestamp:firebase.firestore.FieldValue.serverTimestamp(),
                 pos:0,
-                neg:0      
+                neg:0,
+                users_list:[],      
 
             })
             setinput("");

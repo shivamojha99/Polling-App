@@ -10,14 +10,18 @@ function Login() {
     const SignIn = () =>{
         auth
         .signInWithPopup(provider)
-        .then(result =>{
+        .then(result =>{          /* promises.then for positive outcome */
             console.log(result)
+            var token = result.credential.accessToken;
+            // console.log("The email  is");
+            // console.log(result.user.email);
+            
             dispatch({
                 type:actionTypes.SET_USER,
                 user:result.user
 
             })
-        } )
+        }) 
         .catch(error =>{
             alert(error.message);
         });
@@ -32,7 +36,6 @@ function Login() {
              <h1> Sign in to Poll INDIA</h1>
              <p> Made with love by CodeChamps</p>
              <Button onClick={SignIn}>Sign in with GOOGLE</Button>
-
             </div>
             
         </div>
