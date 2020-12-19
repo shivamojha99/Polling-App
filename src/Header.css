@@ -3,38 +3,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 3px;
-<<<<<<< HEAD
     height: 7vh;
     background-color:#3f51b9;
-=======
-    height: 50px;
-    background-color: orange;
-    opacity: 0.85;
-    border: 2px;
-    margin-top: 10px;
-    border-radius: 20px;
->>>>>>> 5862faa5ae7e28526d537e74dfc5823aca7e86cd
 }
 .header > div >button {
-<<<<<<< HEAD
     margin-top: 6px;
     align-items: center;
 }
-
-=======
-    border: 1px lightblue;
-    border-radius: 6px ;
-    margin-top: 10px;
-    align-items: center;
-}
-
-.header > div  :hover{
-box-shadow: 2px 2px 2px 2px #537dca;
-transform: scale(1.05,1.05);
-}
-
-
->>>>>>> 5862faa5ae7e28526d537e74dfc5823aca7e86cd
+    
 .middle1{
     padding: 14px;
     margin: 15px;
@@ -43,9 +19,7 @@ transform: scale(1.05,1.05);
     border: 2px solid black;
     border-radius: 5px;
 }
-.middle1 >:hover{
-    box-shadow: cornflowerblue;
-}
+
 .lower{
     display:flex;
     flex-wrap: wrap;

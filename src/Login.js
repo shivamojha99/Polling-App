@@ -7,16 +7,10 @@ import { actionTypes } from './Reducer'
 
 function Login() {
   const[state, dispatch]= useStateValue();
-<<<<<<< HEAD
-    const SignIn = () =>{    
-        auth.signInWithPopup(provider)
-            .then(result =>{
-=======
     const SignIn = () =>{
         auth
         .signInWithPopup(provider)
         .then(result =>{          /* promises.then for positive outcome */
->>>>>>> 5862faa5ae7e28526d537e74dfc5823aca7e86cd
             console.log(result)
             var token = result.credential.accessToken;
             // console.log("The email  is");
@@ -30,7 +24,7 @@ function Login() {
         .catch(error =>{
             alert(error.message);
         });
-    }
+    };
     auth.onAuthStateChanged(function(user){
         if(user){
             dispatch({
@@ -39,7 +33,7 @@ function Login() {
 
             })
         }
-    }) 
+    }); 
     
     return (
         <div className="login">
@@ -54,6 +48,6 @@ function Login() {
             </div>
             
         </div>
-    )
-    }
-export default Login
+    );
+    }   
+export default Login;
