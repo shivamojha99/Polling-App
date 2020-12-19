@@ -1,6 +1,9 @@
 import React,{useState} from 'react';
 import db from './Firebase';
-import firebase from './Firebase'
+import firebase from './Firebase';
+import { makeStyles } from '@material-ui/core/styles';
+import AddIcon from '@material-ui/icons/Add';
+import { Button } from "@material-ui/core";
 import "./topic.css"
 function Topic() {
     const [input,setinput]=useState("");
@@ -16,7 +19,7 @@ function Topic() {
 
             })
             setinput("");
-
+            
     }
     return (
         <div className="form">
@@ -25,8 +28,9 @@ function Topic() {
                 value={input}
                 onChange={e=> setinput(e.target.value)}
                 placeholder={"Enter the trending Poll"}/>
-                <button className="button" type="submit" onClick={sendMessage}>Add Topic</button>
-            
+              {/* <button className="button" type="submit" onClick={sendMessage}>Add Topic</button> */}
+              <Button variant="contained" color="primary"
+                  startIcon={<AddIcon />} type="submit" onClick={sendMessage}>Add Topic</Button>
             </form>
 
         </div>

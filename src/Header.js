@@ -19,7 +19,18 @@ const Judge = (props) => {
     
   }
   else{
-      return null;
+    return null;
+      // return(
+      //   <div className="blur">
+      //     <Topicslist
+      //     topicc={props.topic.poll}
+      //     pos={props.topic.pos}
+      //     neg={props.topic.neg}
+      //     id={props.topic.id}
+      //     users_list={props.topic.users_list}
+      //   />
+      //   </div>
+      //   );
 
     
   }
@@ -30,7 +41,7 @@ function Header() {
   const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
-    db.collection("polls_list").onSnapshot((snapshot) => {
+    db.collection("polls_list").orderBy('pos','desc').onSnapshot((snapshot) => {
       settopicslist(
         snapshot.docs.map((doc) => ({
           id: doc.id,

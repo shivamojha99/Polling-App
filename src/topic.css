@@ -1,12 +1,14 @@
 .form{
-
-     border-radius: 14px;
+    border:2px black; 
+    border-radius: 4px;
 }
 
 .inside_form{
     margin-left: 500px;
-    
 }
-
-
-
+.inp{
+    margin-right: 10vh;  
+    height: 30px; 
+    border: 2px solid black; 
+    border-radius: 5px;
+}

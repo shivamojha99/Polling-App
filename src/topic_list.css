@@ -5,7 +5,7 @@
     border-radius: 4px;
     margin: 5px;
     padding: 3px;
-    background-color: black;
+    background-color: rgb(255, 123, 211);
     color:white;
     font-family: "Times New Roman", Times, serif;
     /* width: 450px; */
@@ -17,26 +17,19 @@
     box-shadow: 5px 5px 5px 5px #537dca;
 }
 
+
 .topic_list>.left{
-    border: 1px solid rgb(110, 171, 209);
-    margin-right: 6px;
-    background-color: rgb(57, 151, 57);
+
+    margin-bottom: 6px;
+    cursor: var(--drop);
 }
-.topic_list> .left:hover{
-    border: 1px solid black;
-    cursor: pointer;
-}
+
 .topic_list>.middle{
     margin: 6px;
     font-size: 25px;
 }
 .topic_list>.right{
-    margin-left: 6px;
-    border: 1px solid lightskyblue;
-    background-color: rgb(165, 47, 47);
-}
-.topic_list> .right:hover{
-    cursor: pointer;
-    border: 1px solid black;
+    margin-bottom: 6px;
+    cursor: var(--drop);
 }
 
