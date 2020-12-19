@@ -10,7 +10,7 @@ import { useStateValue } from "./StateProvider";
 function Topic_list(props) {
 
 const [{user}, dispatch]=useStateValue();    
-
+const userId = sessionStorage.getItem('userId');
 // const Alertnow=()=>{
 //     alert('You can vote only once');
 // }
@@ -28,7 +28,7 @@ const [{user}, dispatch]=useStateValue();
                 <Fab size="small" color="primary" aria-label="add">
                 <AddIcon onClick={()=>db.collection('polls_list').doc(props.id).update({
                         pos:props.pos+1,
-                        users_list:[...props.users_list,user.email]
+                        users_list:[...props.users_list,userId]
                         //users_list:props.users_list.push(user.email),
                 })}></AddIcon></Fab>
                 </div>
@@ -38,7 +38,7 @@ const [{user}, dispatch]=useStateValue();
             <Fab size="small" color="secondary" aria-label="remove">
             <RemoveIcon   onClick={()=>db.collection('polls_list').doc(props.id).update({
                         neg:props.neg-1,
-                        users_list:[...props.users_list,user.email]
+                        users_list:[...props.users_list,userId]
                         //users_list:props.users_list.push(user.email)
                         //users_list:props.users_list.push(user.email),
                 })}></RemoveIcon></Fab></div></CardActions>         

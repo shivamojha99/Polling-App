@@ -5,10 +5,15 @@ import Topic from "./Topic";
 import Topicslist from "./Topic_list";
 import { useStateValue } from "./StateProvider";
 import { Button, Grid } from "@material-ui/core";
-import Login from "./Login.js";
+// import Login from "./Login.js";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+const userId = sessionStorage.getItem('userId');
+
 const Judge = (props) => {
-    const [{ user }, dispatch] = useStateValue();
-     if (props.topic.users_list.includes(user.email) === false) {
+    // const [{ user }, dispatch] = useStateValue();
+    
+     if (props.topic.users_list.includes(userId) === props.vote ) {
     return(
       <Topicslist
         topicc={props.topic.poll}
@@ -21,15 +26,18 @@ const Judge = (props) => {
    return null;
      }};
 const signout = () =>{
-  auth.signOut().then(function() {
-      <Login/>
-    }).catch(function(error) {
-      alert(error.message)
-    });
+  sessionStorage.clear();
+  window.location.reload();
+  // auth.signOut().then(function() {  
+    //   <Login/>
+    // }).catch(function(error) {
+    //   alert(error.message)
+    // });
   };
 
 function Header() {
   const [topicslist, settopicslist] = useState([]);
+  const [vote , setVote] = useState(false);
   const [{ user }, dispatch] = useStateValue()
   useEffect(() => {
     db.collection("polls_list").onSnapshot((snapshot) => {
@@ -45,7 +53,23 @@ function Header() {
     });
   }, []);
 
-
+  const myFunction = () => {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  
   return (
     <>
       <div className="header">
@@ -60,15 +84,35 @@ function Header() {
             Today
           </Button>
         </div>
-        <div><Button onClick={signout}>Sign Out</Button></div>
+        <div><Button onClick={signout}><ExitToAppIcon/>Sign Out</Button></div>
                   </div>
-     
-      <div className="middle1">
-        <Topic />
-      </div>
+      <Grid container spacing={0}>
+        <Grid item xs={2} >
+          <div className="dropdown">
+              <button onClick={myFunction} className="dropbtn">  <AccountCircleIcon/>  Profile </button>
+              <div id="myDropdown" className="dropdown-content">
+                <img src={sessionStorage.getItem('userPhoto')} alt={sessionStorage.getItem('userName')} />
+                <p> {sessionStorage.getItem('userName')} </p>
+                <br></br>
+                <p> {sessionStorage.getItem('userId')} </p>
+                <br></br>
+                <p id="created_btn" onClick={ () => setVote(true) }> voted polls </p>
+                <p id="created_btn" onClick={ () => setVote(false) }> New polls </p>
+                <br></br>
+                {/* <a href="#contact">Contact</a> */}
+              </div>
+          </div>
+      </Grid>
+        <Grid item xs={10}> 
+          <div className="middle1">
+            <Topic />
+          </div>
+          
+        </Grid>
+      </Grid>
       <div className="lower">
         {topicslist.map((topic) => (
-            <Judge topic={topic} />            
+            <Judge topic={topic} vote={vote} />            
         ))}
       </div>
     </>
