@@ -1,12 +1,17 @@
 .form{
-
-     border-radius: 14px;
+    border:2px black; 
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .inside_form{
     margin-left: 500px;
-    
 }
-
-
-
+.inp{
+    margin-right: 10vh;  
+    height: 30px; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}

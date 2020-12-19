@@ -1,42 +1,10 @@
-.topic_list{
-    display: flex;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin: 5px;
-    padding: 3px;
-    background-color: black;
-    color:white;
-    font-family: "Times New Roman", Times, serif;
-    /* width: 450px; */
-    height: 50px;
-}
-
-.topic_list:hover{
-    opacity: 0.85;
-    box-shadow: 5px 5px 5px 5px #537dca;
-}
-
-.topic_list>.left{
-    border: 1px solid rgb(110, 171, 209);
-    margin-right: 6px;
-    background-color: rgb(57, 151, 57);
-}
-.topic_list> .left:hover{
-    border: 1px solid black;
-    cursor: pointer;
-}
-.topic_list>.middle{
-    margin: 6px;
-    font-size: 25px;
-}
-.topic_list>.right{
-    margin-left: 6px;
-    border: 1px solid lightskyblue;
-    background-color: rgb(165, 47, 47);
-}
-.topic_list> .right:hover{
-    cursor: pointer;
-    border: 1px solid black;
-}
-
+.root{
+    Width: 70vh;
+    margin: 12vh;
+    height: 30vh;
+  }
+ .middle{
+  font-size: 5vh;
+  text-align: center;
+  margin-bottom: 2vh;
+ }   

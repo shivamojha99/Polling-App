@@ -1,35 +1,31 @@
 .header{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 3px;
-    background-color: black;
-    opacity: 0.85;
-    border: 2px;
-    border-radius: 4px;
+    height: 7vh;
+    background-color:#3f51b9;
 }
-
 .header > div >button {
-    border: 1px lightblue;
-    border-radius: 6px ;
+    margin-top: 6px;
     align-items: center;
-}
-
-.header > div  :hover{
-box-shadow: 2px 2px 2px 2px #537dca;
-transform: scale(1.05,1.05);
 }
 
 .middle1{
     padding: 14px;
     margin: 15px;
+    display: flex;
+    height: 40px;
     border: 2px solid black;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.404);
+    border-radius: 5px;
 }
 .middle1 >:hover{
     box-shadow: cornflowerblue;
 }
-
+.lower{
+    display:flex;
+    flex-wrap: wrap;
+}
 .topicslist{
     border: 2px solid lightgoldenrodyellow;
     margin: auto;

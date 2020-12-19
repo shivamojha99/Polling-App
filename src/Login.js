@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{Component, useState} from 'react'
 import "./login.css"
 import {Button }from "@material-ui/core"
 import { auth, provider } from './Firebase'
@@ -7,21 +7,29 @@ import { actionTypes } from './Reducer'
 
 function Login() {
   const[state, dispatch]= useStateValue();
-    const SignIn = () =>{
-        auth
-        .signInWithPopup(provider)
-        .then(result =>{
+    const SignIn = () =>{    
+        auth.signInWithPopup(provider)
+            .then(result =>{
             console.log(result)
             dispatch({
                 type:actionTypes.SET_USER,
-                user:result.user
-
+                user:result.user,
             })
         } )
         .catch(error =>{
             alert(error.message);
         });
     }
+    auth.onAuthStateChanged(function(user){
+        if(user){
+            dispatch({
+                type:actionTypes.SET_USER,
+                user:user,
+
+            })
+        }
+    }) 
+    
     return (
         <div className="login">
             <div className="login_container">
@@ -37,6 +45,5 @@ function Login() {
             
         </div>
     )
-}
-
+    }
 export default Login
