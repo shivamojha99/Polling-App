@@ -1,8 +1,11 @@
 .form{
     border:2px black; 
     border-radius: 4px;
+<<<<<<< HEAD
     display: flex;
     flex-wrap: wrap;
+=======
+>>>>>>> 5862faa5ae7e28526d537e74dfc5823aca7e86cd
 }
 
 .inside_form{
@@ -11,7 +14,12 @@
 .inp{
     margin-right: 10vh;  
     height: 30px; 
+<<<<<<< HEAD
     border-top: none;
     border-left: none;
     border-right: none;
+=======
+    border: 2px solid black; 
+    border-radius: 5px;
+>>>>>>> 5862faa5ae7e28526d537e74dfc5823aca7e86cd
 }
