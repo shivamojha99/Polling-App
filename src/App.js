@@ -17,7 +17,7 @@ function App() {
           <Header/>
         </div>
         <div className="middle">
-        <Topic_list/>
+        {/* <Topic_list/> */}
         </div>
         </>
       )}

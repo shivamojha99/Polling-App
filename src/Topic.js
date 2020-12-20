@@ -19,9 +19,6 @@ function Topic() {
                 // timestamp:firebase.firestore.FieldValue.serverTimestamp(),
                 pos:0,
                 neg:0,      
-                users_list:[],
-
-                neg:0,
                 users_list:[],      
 
             })

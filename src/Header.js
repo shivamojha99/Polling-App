@@ -1,11 +1,30 @@
 import React, { useEffect, useState } from "react";
 import db, {auth} from "./Firebase";
+import firebase from "./Firebase";
 import "./Header.css";
 import Topic from "./Topic";
 import Topicslist from "./Topic_list";
 import { useStateValue } from "./StateProvider";
 import { Button, Grid } from "@material-ui/core";
 import Login from "./Login.js";
+import { actionTypes } from './Reducer'
+
+// const Signout = () =>{
+//   const [{ user }, dispatch] = useStateValue();
+ 
+//   console.log('call me babe1');
+//   user=null;
+//   return(null)
+//   // console.log('Call me babe');
+//   // //<Login/>
+//   // auth.signOut().then(function() {
+//   //   //  user=null;
+//   //   <Login/>
+//   //   }).catch(function(error) {
+//   //     alert(error.message)
+//   //   });
+//   }
+
 const Judge = (props) => {
     const [{ user }, dispatch] = useStateValue();
      if (props.topic.users_list.includes(user.email) === false) {
@@ -20,13 +39,8 @@ const Judge = (props) => {
    else{
    return null;
      }};
-const signout = () =>{
-  auth.signOut().then(function() {
-      <Login/>
-    }).catch(function(error) {
-      alert(error.message)
-    });
-  };
+
+
 
 function Header() {
   const [topicslist, settopicslist] = useState([]);
@@ -45,6 +59,23 @@ function Header() {
     });
   }, []);
 
+  const Signout=()=>{
+    // var user1 = auth.currentUser;
+
+    // user1.delete().then(function() {
+    //   // User deleted.
+    //   <Login/>
+    // }).catch(function(error) {
+    //   // An error happened.
+    // });
+
+  //   console.log('call me babe');
+    dispatch({
+      type:actionTypes.SET_USER,
+      user:null,
+  });
+  }
+  
 
   return (
     <>
@@ -60,7 +91,7 @@ function Header() {
             Today
           </Button>
         </div>
-        <div><Button onClick={signout}>Sign Out</Button></div>
+        <div><Button onClick={Signout}>Sign Out</Button></div>
                   </div>
      
       <div className="middle1">

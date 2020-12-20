@@ -4,6 +4,7 @@ import {Button }from "@material-ui/core"
 import { auth, provider } from './Firebase'
 import { useStateValue } from './StateProvider'
 import { actionTypes } from './Reducer'
+import Header from './Header'
 
 function Login() {
   const[state, dispatch]= useStateValue();
@@ -13,9 +14,6 @@ function Login() {
         .then(result =>{          /* promises.then for positive outcome */
             console.log(result)
             var token = result.credential.accessToken;
-            // console.log("The email  is");
-            // console.log(result.user.email);
-            
             dispatch({
                 type:actionTypes.SET_USER,
                 user:result.user,
@@ -27,12 +25,28 @@ function Login() {
     };
     auth.onAuthStateChanged(function(user){
         if(user){
-            dispatch({
-                type:actionTypes.SET_USER,
-                user:user,
+            return(
+                <Header/>
+            )
+            
+            // dispatch({
+            //     type:actionTypes.SET_USER,
+            //     user:user,
 
-            })
+            // })
         }
+         else{
+             return(
+                <Login/>
+             )}
+        //     
+        //     // dispatch({
+        //     //     type:actionTypes.SET_USER,
+        //     //     user:null,
+
+        //     // })
+
+        // }
     }); 
     
     return (
