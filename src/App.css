@@ -7,6 +7,7 @@
  .App{
   background-image: url(https://cdn.britannica.com/s:800x1000/84/203584-050-57D326E5/speed-internet-technology-background.jpg);
   background-position: center;
+  width: 100%;
 }
 :root {
   --drop: pointer;

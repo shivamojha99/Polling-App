@@ -1,12 +1,12 @@
 .root{
-    Width: 70vh;
+    Width: 70%;
     margin: 12vh;
     height: 30vh;
   }
  .middle{
   font-size: 5vh;
   text-align: center;
-  margin-bottom: 2vh;
+  /* margin-bottom: 2vh; */
  }   
 .topic_list{
     display: flex;
@@ -29,3 +29,43 @@
     cursor: var(--drop);
 }
 
+.positiveBar{
+    display: block;
+    padding: 5px;
+    height: 20px;
+    
+}
+#posBar{
+    float: right;
+    height: 20px;
+    width: 200px;
+}
+#thumbUp{
+    float: left;
+    color: chartreuse;
+}
+
+.negativeBar{
+    display: block;
+    padding: 5px;
+    height: 20px;
+}
+#negBar{
+    float:right;
+    height: 20px;
+    width: 200px;
+    
+}
+#thumbdown{
+    float: left;
+    color: crimson;
+}
+#thumbdown:hover {
+    background-color: darkslateblue;
+    font-size: 30px;
+    
+}
+#thumbUp:hover{
+    background-color: green;
+    font-size: 30px;
+}

@@ -15,7 +15,9 @@ function Login() {
             var token = result.credential.accessToken;
             // console.log("The email  is");
             // console.log(result.user.email);
-            
+            sessionStorage.setItem('userId' , `${result.user.email}` );
+            sessionStorage.setItem('userName' , `${result.user.displayName}` );
+            sessionStorage.setItem('userPhoto', `${result.user.photoURL}` );
             dispatch({
                 type:actionTypes.SET_USER,
                 user:result.user,
@@ -25,15 +27,15 @@ function Login() {
             alert(error.message);
         });
     };
-    auth.onAuthStateChanged(function(user){
-        if(user){
-            dispatch({
-                type:actionTypes.SET_USER,
-                user:user,
+    // auth.onAuthStateChanged(function(user){
+    //     if(user){
+    //         dispatch({
+    //             type:actionTypes.SET_USER,
+    //             user:user,
 
-            })
-        }
-    }); 
+    //         })
+    //     }
+    // }); 
     
     return (
         <div className="login">

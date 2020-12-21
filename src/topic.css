@@ -4,16 +4,20 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+.button{
+    align-self: right;
+    margin-left: 70vw;
+}
 .inside_form{
-    margin-left: 500px;
+    align-self: start;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .inp{
-    margin-right: 10vh;  
+    margin-right: 10px;  
     height: 30px; 
     border: 2px solid black; 
     border-top: none;
     border-left: none;
-    border-right: none;
-   
+    border-right: none;   
 }

@@ -30,16 +30,17 @@ function Topic() {
     }
     return (
         <div className="form">
-            <form  className="inside_form">
+        <div> <form  className="inside_form">
                 <input className="inp"
                 value={input}
                 onChange={e=> setinput(e.target.value)}
                 placeholder={"Enter the trending Poll"}/>
-                
+               </form>  </div>
+              <div>
               {/* <button className="button" type="submit" onClick={sendMessage}>Add Topic</button> */}
-              <Button variant="contained" color="primary"
+              <Button variant="contained" color="primary" className="button"
                   startIcon={<AddIcon />} type="submit" onClick={sendMessage}>Add Topic</Button>
-            </form>
+            </div>
 
         </div>
     )
