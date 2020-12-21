@@ -20,13 +20,6 @@ const Judge = (props) => {
    else{
    return null;
      }};
-const signout = () =>{
-  auth.signOut().then(function() {
-      <Login/>
-    }).catch(function(error) {
-      alert(error.message)
-    });
-  };
 
 function Header() {
   const [topicslist, settopicslist] = useState([]);
@@ -44,6 +37,16 @@ function Header() {
       );
     });
   }, []);
+  const Signout = () =>{
+  const [{ user }, dispatch] = useStateValue();
+  auth.signOut().then(function() {
+      dispatch({
+        user:null,
+  })
+    }).catch(function(error) {
+      alert(error.message)
+    }); 
+};
 
 
   return (
@@ -60,8 +63,8 @@ function Header() {
             Today
           </Button>
         </div>
-        <div><Button onClick={signout}>Sign Out</Button></div>
-                  </div>
+        <div><Button onClick={Signout}>Sign Out</Button></div>
+        </div>
      
       <div className="middle1">
         <Topic />

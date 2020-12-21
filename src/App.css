@@ -1,10 +1,13 @@
 *{
   margin: 0px;
 }
-/* .App{
-  background-image: url(https://images.unsplash.com/photo-1518144591331-17a5dd71c477?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80);
-} */
-
+/*.App{
+  background-image: url(https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1051&q=80);
+}*/
+ .App{
+  background-image: url(https://cdn.britannica.com/s:800x1000/84/203584-050-57D326E5/speed-internet-technology-background.jpg);
+  background-position: center;
+}
 :root {
   --drop: pointer;
 }
