@@ -1,5 +1,6 @@
 export const initialState={
     user:null,
+    canVote:null,
 };
 
 export const actionTypes={
@@ -13,6 +14,17 @@ export const actionTypes={
             ...state,
             user:action.user
         }
+        case "cannotvote":
+            return{
+                ...state,
+                canVote:false,
+            }
+            case "canvote":
+                return{
+                    ...state,
+                    canVote:true,
+                }    
+
         default:
         return state
     }

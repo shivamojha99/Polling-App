@@ -11,18 +11,40 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const userId = sessionStorage.getItem('userId');
 
 const Judge = (props) => {
-    // const [{ user }, dispatch] = useStateValue();
-    
+     const [{canVote}, dispatch] = useStateValue();
+
+    //  if(props.vote==true)
+    //  {
+    //   dispatch({           ---A global variable canVote was introduced
+    //                        ---but
+    //       type:"canvote"   ---This part was getting error of maximum
+    //                        ---depth Reached....Hence commented and passed
+    //                        ---as a normal prop
+    //     });
+        
+    //  }
+
+    //  else if(props.vote==false)
+    //  {
+    //   dispatch({
+    //     type:"cannotvote"
+    //   });
+      
+    //  }
+     
      if (props.topic.users_list.includes(userId) === props.vote ) {
     return(
+    
       <Topicslist
         topicc={props.topic.poll}
         pos={props.topic.pos}
         neg={props.topic.neg}
         id={props.topic.id}
         users_list={props.topic.users_list}
+        vote={props.vote}
       />);}
    else{
+    console.log('Hello4');
    return null;
      }};
 const signout = () =>{
