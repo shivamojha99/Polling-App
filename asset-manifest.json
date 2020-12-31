@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Polling-App/static/css/main.e3c89b9d.chunk.css",
+    "main.js": "/Polling-App/static/js/main.e2c90b54.chunk.js",
+    "main.js.map": "/Polling-App/static/js/main.e2c90b54.chunk.js.map",
+    "runtime-main.js": "/Polling-App/static/js/runtime-main.5af33215.js",
+    "runtime-main.js.map": "/Polling-App/static/js/runtime-main.5af33215.js.map",
+    "static/js/2.a3aa3d94.chunk.js": "/Polling-App/static/js/2.a3aa3d94.chunk.js",
+    "static/js/2.a3aa3d94.chunk.js.map": "/Polling-App/static/js/2.a3aa3d94.chunk.js.map",
+    "static/js/3.e92f94f2.chunk.js": "/Polling-App/static/js/3.e92f94f2.chunk.js",
+    "static/js/3.e92f94f2.chunk.js.map": "/Polling-App/static/js/3.e92f94f2.chunk.js.map",
+    "index.html": "/Polling-App/index.html",
+    "static/css/main.e3c89b9d.chunk.css.map": "/Polling-App/static/css/main.e3c89b9d.chunk.css.map",
+    "static/js/2.a3aa3d94.chunk.js.LICENSE.txt": "/Polling-App/static/js/2.a3aa3d94.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5af33215.js",
+    "static/js/2.a3aa3d94.chunk.js",
+    "static/css/main.e3c89b9d.chunk.css",
+    "static/js/main.e2c90b54.chunk.js"
+  ]
+}
